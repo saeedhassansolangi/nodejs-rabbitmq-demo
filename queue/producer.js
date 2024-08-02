@@ -7,7 +7,7 @@ rabbitMQConnection()
     for (let i = 0; i < 10; i++) {
         setTimeout(() => {
             console.log('Message sent to the queue: ', users[i]);
-            channel.sendToQueue('node-queue', Buffer.from(JSON.stringify(users[i])));
+            channel.sendToQueue('java-queue', Buffer.from(JSON.stringify(users[i])));
         }, 2000 * i);
     }
     
